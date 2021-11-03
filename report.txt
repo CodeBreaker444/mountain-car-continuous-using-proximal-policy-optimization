@@ -1,0 +1,51 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'PPO.py'
+ outputting to 'PPO-upgraded.py'
+--------------------------------------------------------------------------------
+
+9:9: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+10:13: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+10:13: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+11:12: INFO: Renamed 'tf.keras.initializers.RandomUniform' to 'tf.compat.v1.keras.initializers.RandomUniform'
+12:14: INFO: Multiplying scale arg of tf.contrib.layers.l2_regularizer by half to what tf.keras.regularizers.l2 expects.
+
+28:19: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+29:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+30:19: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+31:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+34:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+35:17: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+38:17: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+42:21: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+44:25: INFO: Added keywords to args of function 'tf.reduce_mean'
+45:29: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+54:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+56:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+59:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+63:26: INFO: Added keywords to args of function 'tf.reduce_mean'
+66:23: INFO: Added keywords to args of function 'tf.reduce_sum'
+67:41: INFO: Renamed 'tf.log' to 'tf.math.log'
+68:22: INFO: Added keywords to args of function 'tf.reduce_mean'
+71:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+72:29: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+88:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+89:17: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+92:17: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+96:17: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+102:20: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+106:24: INFO: Renamed 'tf.distributions.Normal' to 'tf.compat.v1.distributions.Normal'
+107:17: INFO: Renamed 'tf.get_collection' to 'tf.compat.v1.get_collection'
+107:35: INFO: Renamed 'tf.GraphKeys' to 'tf.compat.v1.GraphKeys'
+--------------------------------------------------------------------------------
+
